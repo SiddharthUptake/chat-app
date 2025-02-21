@@ -21,7 +21,8 @@ const SignUp = () => {
   };
 
   return (
-    <AuthLayout>
+
+    <AuthLayout title="Create Account" description=" Get started with your free account">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         {/* Full Name */}
         <Input
@@ -58,8 +59,8 @@ const SignUp = () => {
 
       <div className="text-center">
         <p className="text-base-content/60">
-          Already have an account?{" "}
-          <Link to="/login" className="link link-primary">
+          Already have an account?
+          <Link to="/login" className="link link-primary ps-2">
             Sign in
           </Link>
         </p>

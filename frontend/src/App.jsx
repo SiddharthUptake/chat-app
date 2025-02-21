@@ -7,7 +7,7 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import { useAuthStore } from "./store/useAuthStore";
-import FireAnimate from "./components/FireAnimate";
+import FireAnimate from "./components/Ui/FireAnimate";
 
 const App = () => {
   const { authUser, checkAuth, isCheckingAuth } = useAuthStore();

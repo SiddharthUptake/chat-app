@@ -2,7 +2,7 @@ import { FlameKindling } from "lucide-react";
 import React from "react";
 import FireAnimate from "../Ui/FireAnimate";
 
-const AuthLayout = ({ children }) => {
+const AuthLayout = ({ children, title = "", description = "" }) => {
   return (
     <div className="min-h-screen grid lg:grid-cols-2">
       {/* Left Side */}
@@ -14,10 +14,8 @@ const AuthLayout = ({ children }) => {
               <div className="size-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                 <FlameKindling className="size-6 text-primary" />
               </div>
-              <h1 className="text-2xl font-bold mt-2">Create Account</h1>
-              <p className="text-base-content/60">
-                Get started with your free account
-              </p>
+              <h1 className="text-2xl font-bold mt-2">{title}</h1>
+              <p className="text-base-content/60">{description}</p>
             </div>
           </div>
 

@@ -2,6 +2,10 @@ import React from "react";
 import AuthLayout from "../components/layouts/AuthLayout";
 import Input from "../components/Fields/Input";
 import { LoginSchema } from "../validations/auth.schema";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { Lock, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
 
@@ -19,7 +23,7 @@ const Login = () => {
 
 
   return (
-    <AuthLayout>
+    <AuthLayout title={`Welcome Back To FireChats`}>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <Input
           label="Email"
@@ -46,8 +50,8 @@ const Login = () => {
       <div className="text-center">
         <p className="text-base-content/60">
           Don't have an account?
-          <Link to="/signup" className="link link-primary">
-            Sign Up
+          <Link to="/signup" className="link link-primary ps-2">
+             Sign Up
           </Link>
         </p>
       </div>
